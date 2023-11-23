@@ -1,6 +1,7 @@
 :root {
     --c-primary: #17181C;
     --c-secondary: #222327;
+    --c-white: #FFFFFF;
     --c-primary-light: #E5E4E4;
     --f-family: 'Montserrat';
     --c-text: #EBEBEB;
@@ -32,6 +33,7 @@ h4,
 h5,
 h6 {
     margin: 0;
+    color: var(--c-primary-light);
 }
 
 ul {
@@ -44,18 +46,31 @@ img {
     height: auto;
 }
 
+body {
+    background-color: var(--c-primary);
+}
+
 /* body {
     font-family: var(--f-family), serif;
     background-color: var(--c-secondary);
-}
+} */
 
-.container {
+/* .container {
     padding: 96px 16px;
     max-width: 320px;
     margin: 0 auto;
 
 } */
 
+/* Header section */
+
+.logo {
+
+}
+
+
+
+/* Hero section */
 
 .hero-section {
     min-width: 320px;
@@ -65,17 +80,14 @@ img {
     background-position: center;
     background-size: cover;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: var(--c-secondary);
-    text-align: center;
-    background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-desc.jpg');
-    list-style: none;
+    background: var(--c-secondary) linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_desk@2x.jpg') center/cover;
     object-fit: cover;
     object-position: center;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767.98px) and (min-resolution: 96dpi) {
+@media screen and (min-width: 375px) and (max-width: 1023.98px) and (min-resolution: 96dpi) {
     .hero-section {
-        background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-mob.jpg');
+        background: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_mob.jpg');
         max-height: 432px;
     }
 
@@ -83,18 +95,18 @@ img {
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 767.98px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 375px) and (max-width: 1023.98px) and (min-resolution: 192dpi) {
     .hero-section {
-        background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-mob@2x.jpg');
+        background: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_mob@2x.jpg');
         max-height: 432px;
     }
 
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1157.98px) and (min-resolution: 96dpi) {
+@media screen and (min-width: 1024px) and (max-width: 1439.98px) and (min-resolution: 96dpi) {
     .hero-section {
-        background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-tab.jpg');
+        background: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_tab.jpg');
         background-position: bottom;
         max-height: 436px;
     }
@@ -102,29 +114,48 @@ img {
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1157.98px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 1024px) and (max-width: 1439.98px) and (min-resolution: 192dpi) {
     .hero-section {
-        background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-tab@2x.jpg');
+        background: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_tab@2x.jpg');
         background-position: bottom;
         max-height: 436px;
     }
 
 }
 
-@media screen and (min-width: 1158px) and (min-resolution: 96dpi) {
+@media screen and (min-width: 1440px) and (min-resolution: 96dpi) {
     .hero-section {
-        background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-desc.jpg');
+        background: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_desk.jpg');
         max-width: 1440px;
         min-height: 600px;
     }
 
 }
 
-@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
     .hero-section {
-        background-image: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero-image-desc@2x.jpg');
+        background: linear-gradient(282deg, rgba(30, 26, 26, 0.28) 6.78%, rgba(30, 26, 26, 0.28) 36.13%, rgba(30, 26, 26, 0.15) 88.91%), url('../images/hero-image/hero_desk@2x.jpg');
         min-height: 600px;
         max-width: 1440px;
     }
 
+}
+
+
+/* Technology section*/
+
+.technology-section {
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--c-secondary);
+    text-align: center;
+    background: linear-gradient(68deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 96.93%) url('../images/technologyPDR/tech_desk.jpg');
+    list-style: none;
+    object-fit: cover;
+    object-position: center;
 }
